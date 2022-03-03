@@ -1,0 +1,17 @@
+# folders
+.storybook
+docs
+eslint-rules
+coverage
+
+# files
+.eslintignore
+.eslintrc.js
+.nvmrc
+.prettierignore
+.prettierrc
+.releaserc.js
+commitlint.config.js
+rollup.config.js
+tsconfig.json
+yarn.lock
