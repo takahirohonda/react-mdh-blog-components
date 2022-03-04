@@ -22,16 +22,16 @@ jobs:
       - name: Install
         run: |
           yarn install
-      - name: Type-Checks
+      - name: Type Check
         run: |
           yarn type-check
       - name: Lint
         run: |
           yarn lint
-      - name: Unit-Tests
+      - name: Unit Tests
         run: |
           yarn test
-      - name: Unit-Tests
+      - name: Module Build
         run: |
           yarn test
       - name: Build
