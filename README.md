@@ -2,4 +2,4 @@
 
 ## In Progress...
 
-React Components for MyDatahack blog site.
+React Components for MyDatahack blog site
