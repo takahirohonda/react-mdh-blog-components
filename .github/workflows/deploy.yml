@@ -5,11 +5,7 @@ on:
       - main
 jobs:
   run-test-deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node-version: [14.x]
+    runs-on: node:14-alpine
     steps:
       - name: Checkout
         uses: actions/checkout@v2
