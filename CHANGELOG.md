@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.1.0...v1.2.0) (2022-04-23)
+
+
+### Features
+
+* **component:** add FlipCardCarousel ([1578f68](https://github.com/mydatahack/react-mdh-blog-components/commit/1578f68592d04913f646a3c348c10809372cacd8))
+
 # [1.1.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.0.0...v1.1.0) (2022-04-12)
 
 
