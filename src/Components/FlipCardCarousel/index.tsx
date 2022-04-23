@@ -1,0 +1,1 @@
+export { FlipCardCarousel } from './FlipCardCarousel'
