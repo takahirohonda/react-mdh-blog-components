@@ -1,2 +1,3 @@
-export * from './FlipCard'
-export * from './FlipCards'
+export * from './FlipCardsVocab'
+export * from './FlipCardsQAndA'
+export * from './QuoteCards'

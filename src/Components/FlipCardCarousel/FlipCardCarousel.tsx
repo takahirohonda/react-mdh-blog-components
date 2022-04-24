@@ -7,14 +7,14 @@ import {
 
 export interface FlipCardCarouselProps {
   content: ReactNode[]
-  width: string
-  height: string
+  width?: string
+  height?: string
 }
 
 export const FlipCardCarousel: React.VFC<FlipCardCarouselProps> = ({
   content,
-  width,
-  height,
+  width = '320px',
+  height = '400px',
 }) => {
   return (
     <StyledFlipCardCarouselUl width={width} height={height}>

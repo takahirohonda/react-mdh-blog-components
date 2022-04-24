@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import {
@@ -6,8 +6,6 @@ import {
   StyledFlipCardBack,
   StyledFlipCardContainer,
   StyledFlipCardFront,
-  StyledHeading,
-  StyledP,
 } from './FlipCard.styled'
 
 const showBcakAnimate = {
@@ -28,15 +26,13 @@ const flipTransition = {
 }
 
 export interface FlipCardProps {
-  word: string
-  definition: string
-  usage?: string
+  frontContent: ReactNode
+  backContent: ReactNode
 }
 
 export const FlipCard: React.VFC<FlipCardProps> = ({
-  word,
-  definition,
-  usage,
+  frontContent,
+  backContent,
 }) => {
   const [showBack, setShowBack] = useState(false)
   const [ref, inView] = useInView()
@@ -60,15 +56,8 @@ export const FlipCard: React.VFC<FlipCardProps> = ({
         transition={flipTransition}
         whileDrag={showFrontAnimate}
       >
-        <StyledFlipCardFront>
-          <StyledP>{word}</StyledP>
-        </StyledFlipCardFront>
-        <StyledFlipCardBack>
-          <StyledHeading>Definition:</StyledHeading>
-          <StyledP>{definition}</StyledP>
-          <StyledHeading>Usage:</StyledHeading>
-          <StyledP>{usage}</StyledP>
-        </StyledFlipCardBack>
+        <StyledFlipCardFront>{frontContent}</StyledFlipCardFront>
+        <StyledFlipCardBack>{backContent}</StyledFlipCardBack>
       </StyledFlipCardContainer>
     </StyledCard>
   )

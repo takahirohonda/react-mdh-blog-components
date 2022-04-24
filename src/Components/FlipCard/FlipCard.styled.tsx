@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-import { StyledTextRegularNoSizeChangeOnMobile } from '../../Typography'
-
 // This controls the size of the flip card
 export const StyledCard = styled.div`
   position: relative;
@@ -43,14 +41,4 @@ export const StyledFlipCardBack = styled(motion.div)`
   justify-content: center;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-`
-
-export const StyledP = styled.p`
-  ${StyledTextRegularNoSizeChangeOnMobile}
-  font-size: 1rem;
-  margin: 10px;
-`
-
-export const StyledHeading = styled(StyledP)`
-  font-weight: bold;
 `
