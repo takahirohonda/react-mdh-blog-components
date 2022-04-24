@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.2.0...v1.3.0) (2022-04-24)
+
+
+### Features
+
+* **component:** add FlipCards components ([cee921a](https://github.com/mydatahack/react-mdh-blog-components/commit/cee921a75e504198d94023569f3b47d0a3934d48))
+
 # [1.2.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.1.0...v1.2.0) (2022-04-23)
 
 
