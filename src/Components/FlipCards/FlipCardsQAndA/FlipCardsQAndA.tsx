@@ -4,7 +4,7 @@ import { FlipCardCarousel as Carousel } from 'Components/FlipCardCarousel'
 import {
   QAndABackContent,
   QAndABackContentProps,
-  QAndAbFrontContent,
+  QAndAFrontContent,
   QAndAFrontContentProps,
 } from '../FlipCardContent'
 
@@ -24,7 +24,7 @@ export const FlipCardsQAndA: React.FC<FlipCardsQAndAProps> = ({ content }) => {
         .map((element) => (
           <FlipCard
             key={element.question}
-            frontContent={<QAndAbFrontContent question={element.question} />}
+            frontContent={<QAndAFrontContent question={element.question} />}
             backContent={<QAndABackContent answer={element.answer} />}
           />
         ))}

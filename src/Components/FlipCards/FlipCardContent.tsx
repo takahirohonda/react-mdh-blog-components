@@ -38,7 +38,7 @@ export interface QAndAFrontContentProps {
   question: string
 }
 
-export const QAndAbFrontContent: React.FC<QAndAFrontContentProps> = ({
+export const QAndAFrontContent: React.FC<QAndAFrontContentProps> = ({
   question,
 }) => <StyledP>{question}</StyledP>
 
@@ -52,5 +52,26 @@ export const QAndABackContent: React.FC<QAndABackContentProps> = ({
   <>
     <StyledHeading>Answer:</StyledHeading>
     <StyledP>{answer}</StyledP>
+  </>
+)
+
+export interface PhrasesAndGrammersFrontContentProps {
+  phrase: string
+}
+
+export const PhrasesAndGrammersFrontContent: React.FC<PhrasesAndGrammersFrontContentProps> = ({
+  phrase,
+}) => <StyledP>{phrase}</StyledP>
+
+export interface PhrasesAndGrammersBackContentProps {
+  note: string
+}
+
+export const PhrasesAndGrammersBackContent: React.FC<PhrasesAndGrammersBackContentProps> = ({
+  note,
+}) => (
+  <>
+    <StyledHeading>Note:</StyledHeading>
+    <StyledP>{note}</StyledP>
   </>
 )
