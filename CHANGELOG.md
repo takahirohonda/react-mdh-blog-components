@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.5.0...v1.6.0) (2022-04-25)
+
+
+### Features
+
+* **component:** fix quotecard width ([fbfd7b2](https://github.com/mydatahack/react-mdh-blog-components/commit/fbfd7b2862b43d681a778b94e02adbbf3d34670e))
+
 # [1.5.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.4.0...v1.5.0) (2022-04-25)
 
 
