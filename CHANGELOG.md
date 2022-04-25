@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.4.0...v1.5.0) (2022-04-25)
+
+
+### Features
+
+* **component:** add FlipCardsPhrasesAndGrammers ([de24a8b](https://github.com/mydatahack/react-mdh-blog-components/commit/de24a8b2cefcbda6e6e107c9b8b1becdd303dec4))
+
 # [1.4.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.3.1...v1.4.0) (2022-04-25)
 
 
