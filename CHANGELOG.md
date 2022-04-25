@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.3.1...v1.4.0) (2022-04-25)
+
+
+### Features
+
+* **build script:** update rollup config ([04f110c](https://github.com/mydatahack/react-mdh-blog-components/commit/04f110cd95632bebc152b5156db2e0fad609bbaf)), closes [#4](https://github.com/mydatahack/react-mdh-blog-components/issues/4)
+
 ## [1.3.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.3.0...v1.3.1) (2022-04-25)
 
 
