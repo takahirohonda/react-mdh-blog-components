@@ -18,7 +18,8 @@
     "noImplicitAny": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "declaration": true
+    "declaration": true,
+    "sourceMap": true
   },
   "include": ["src"],
   "exclude": ["node_modules"]
