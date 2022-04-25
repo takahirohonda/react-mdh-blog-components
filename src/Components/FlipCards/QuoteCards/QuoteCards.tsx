@@ -13,8 +13,8 @@ export interface QuoteCardsProps {
 }
 
 const StyledQuoteCardsContainer = styled.div`
-  width: 340px;
-  height: 280px;
+  width: 330px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
