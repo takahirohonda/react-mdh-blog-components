@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.6.0...v1.6.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* **component:** fix width for QuoteCardContainer ([544e4de](https://github.com/mydatahack/react-mdh-blog-components/commit/544e4de36b629d794636ecec9d780e5a49b2bb47))
+
 # [1.6.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.5.0...v1.6.0) (2022-04-25)
 
 
