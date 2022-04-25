@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.3.0...v1.3.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* **dependencies:** move react-intersection-observer dependencies ([2c84320](https://github.com/mydatahack/react-mdh-blog-components/commit/2c84320bce115eb99d344609059c1727c3654882))
+
 # [1.3.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.2.0...v1.3.0) (2022-04-24)
 
 
