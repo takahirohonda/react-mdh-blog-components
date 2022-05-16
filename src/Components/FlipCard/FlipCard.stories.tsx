@@ -9,6 +9,13 @@ import { FlipCard as FlipCardComponent } from '.'
 export default {
   title: 'Components/FlipCard',
   component: FlipCardComponent,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Children for FlipCards',
+      },
+    },
+  },
 }
 
 const word = 'ostensibly'

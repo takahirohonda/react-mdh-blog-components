@@ -55,19 +55,19 @@ export const QAndABackContent: React.FC<QAndABackContentProps> = ({
   </>
 )
 
-export interface PhrasesAndGrammersFrontContentProps {
+export interface PhrasesAndGrammarsFrontContentProps {
   phrase: string
 }
 
-export const PhrasesAndGrammersFrontContent: React.FC<PhrasesAndGrammersFrontContentProps> = ({
+export const PhrasesAndGrammarsFrontContent: React.FC<PhrasesAndGrammarsFrontContentProps> = ({
   phrase,
 }) => <StyledP>{phrase}</StyledP>
 
-export interface PhrasesAndGrammersBackContentProps {
+export interface PhrasesAndGrammarsBackContentProps {
   note: string
 }
 
-export const PhrasesAndGrammersBackContent: React.FC<PhrasesAndGrammersBackContentProps> = ({
+export const PhrasesAndGrammarsBackContent: React.FC<PhrasesAndGrammarsBackContentProps> = ({
   note,
 }) => (
   <>

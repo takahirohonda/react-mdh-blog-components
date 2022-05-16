@@ -6,6 +6,11 @@ import { FlipCardsVocab as FlipCardsVocabComponent } from '.'
 export default {
   title: 'Components/FlipCards/FlipCardsVocab',
   component: FlipCardsVocabComponent,
+  docs: {
+    description: {
+      component: 'For learning English vocabulary',
+    },
+  },
 }
 
 const FlipCardsVocabTemplate: Story = () => (
