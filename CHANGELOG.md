@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.6.1...v2.0.0) (2022-05-16)
+
+
+### Features
+
+* **component:** fix misspelling of grammar ([c83a361](https://github.com/mydatahack/react-mdh-blog-components/commit/c83a3611253ed3cd52dcd5ba3c533d1a9a65947c))
+
+
+### BREAKING CHANGES
+
+* **component:** Component name has been updated
+
 ## [1.6.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.6.0...v1.6.1) (2022-04-25)
 
 ### Bug Fixes
