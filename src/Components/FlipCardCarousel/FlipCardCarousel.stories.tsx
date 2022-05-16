@@ -6,6 +6,11 @@ import { FlipCardCarousel as FlipCardCarouselComponent } from '.'
 export default {
   title: 'Components/FlipCardCarousel',
   component: FlipCardCarouselComponent,
+  docs: {
+    description: {
+      component: 'Use FlipCards as children',
+    },
+  },
 }
 
 const FlipCardCarouselChildrenContent = [

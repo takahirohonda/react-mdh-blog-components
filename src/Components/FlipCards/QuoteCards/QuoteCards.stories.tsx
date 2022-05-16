@@ -6,6 +6,11 @@ import { QuoteCards as QuoteCardsComponent } from '.'
 export default {
   title: 'Components/FlipCards/QuoteCards',
   component: QuoteCardsComponent,
+  docs: {
+    description: {
+      component: 'For interesting quotes',
+    },
+  },
 }
 
 const QuoteCardsTemplate: Story = () => (

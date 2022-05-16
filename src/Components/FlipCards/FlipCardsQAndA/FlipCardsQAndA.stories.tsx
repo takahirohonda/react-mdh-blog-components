@@ -5,6 +5,11 @@ import { FlipCardsQAndA as FlipCardsQAndAComponent } from '.'
 export default {
   title: 'Components/FlipCards/FlipCardsQAndA',
   component: FlipCardsQAndAComponent,
+  docs: {
+    description: {
+      component: 'For trivia',
+    },
+  },
 }
 
 const data = [
