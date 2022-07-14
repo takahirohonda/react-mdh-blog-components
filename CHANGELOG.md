@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.0.0...v2.1.0) (2022-07-14)
+
+
+### Features
+
+* **tsconfig:** add declarationMap true to tsconfig for easy debugging ([7798fe4](https://github.com/mydatahack/react-mdh-blog-components/commit/7798fe481566c02acf883decd936fbcd0f0efe0e)), closes [#9](https://github.com/mydatahack/react-mdh-blog-components/issues/9)
+
 # [2.0.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v1.6.1...v2.0.0) (2022-05-16)
 
 
