@@ -23,5 +23,11 @@
     "declarationMap": true
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "**/*.(test|spec|stories).(ts|tsx)",
+    "node_modules",
+    "src/**/__mocks__/**",
+    "src/reportWebVitals.ts",
+    "src/setupTests.ts"
+  ]
 }

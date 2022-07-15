@@ -8,6 +8,8 @@ import svgr from '@svgr/rollup'
 import css from 'rollup-plugin-import-css'
 import externals from 'rollup-plugin-node-externals'
 import { visualizer } from 'rollup-plugin-visualizer'
+import includePaths from 'rollup-plugin-includepaths'
+import image from '@rollup/plugin-image'
 
 export default {
   input: ['src/index.ts'],
@@ -21,17 +23,10 @@ export default {
     },
   ],
   plugins: [
-    typescript({
-      exclude: [
-        'src/stories/**/**.*',
-        '**/*.(test|spec|stories).(ts|tsx)',
-        'src/setupTests.ts',
-        'src/reportWebVitals.ts',
-      ], // don't generate *.d.ts files - can move to tsconfig exclude section.
-    }),
     externals(),
     resolve(),
     commonjs(),
+    typescript(),
     json(),
     css(),
     svgr({
@@ -39,6 +34,8 @@ export default {
       stringify: false,
     }),
     url(),
+    image(),
+    includePaths({ paths: ['src'] }),
     Boolean(process.env.ANALYZE) &&
       visualizer({
         filename: 'stats.html',
