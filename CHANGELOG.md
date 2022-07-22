@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.1.0...v2.2.0) (2022-07-22)
+
+
+### Features
+
+* **graphics:** add Graphic component ([5ae5694](https://github.com/mydatahack/react-mdh-blog-components/commit/5ae569497b4fc5e5ab0e3a9b2cbd2ad3785abcae))
+
 # [2.1.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.0.0...v2.1.0) (2022-07-14)
 
 
