@@ -19,6 +19,7 @@ export interface FlipCardsVocabProps {
 export const FlipCardsVocab: React.FC<FlipCardsVocabProps> = ({ content }) => {
   return (
     <Carousel
+      dataTestId="flipCardVocab"
       content={content
         .sort(() => Math.random() - 0.5)
         .map((element) => (
