@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.2.0...v2.2.1) (2022-07-24)
+
+
+### Bug Fixes
+
+* **flipcardcarousel:** add data-testid for testing ([10b7877](https://github.com/mydatahack/react-mdh-blog-components/commit/10b78775f13c718e86a8955c9945c06b9c35210d))
+
 # [2.2.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.1.0...v2.2.0) (2022-07-22)
 
 
