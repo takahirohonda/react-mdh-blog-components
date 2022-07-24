@@ -26,6 +26,7 @@ const StyledQuoteCardsContainer = styled.div`
 export const QuoteCards: React.FC<QuoteCardsProps> = ({ content }) => {
   return (
     <Carousel
+      dataTestId="flipCardQuote"
       content={content
         .sort(() => Math.random() - 0.5)
         .map((element) => (

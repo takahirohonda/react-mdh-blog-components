@@ -19,6 +19,7 @@ export interface FlipCardsQAndAProps {
 export const FlipCardsQAndA: React.FC<FlipCardsQAndAProps> = ({ content }) => {
   return (
     <Carousel
+      dataTestId="flipCardQAndA"
       content={content
         .sort(() => Math.random() - 0.5)
         .map((element) => (

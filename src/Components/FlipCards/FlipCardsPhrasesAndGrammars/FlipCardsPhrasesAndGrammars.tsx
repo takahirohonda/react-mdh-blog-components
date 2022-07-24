@@ -21,6 +21,7 @@ export const FlipCardsPhrasesAndGrammars: React.FC<FlipCardsPhrasesAndGrammarsPr
 }) => {
   return (
     <Carousel
+      dataTestId="flipCardPhrasesAndGrammars"
       content={content
         .sort(() => Math.random() - 0.5)
         .map((element) => (
