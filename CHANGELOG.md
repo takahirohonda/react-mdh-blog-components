@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.3.0...v2.3.1) (2022-08-14)
+
+
+### Bug Fixes
+
+* **breakpoint:** aligned breakpoints with mdh-blog-gatsby site ([5bc840b](https://github.com/mydatahack/react-mdh-blog-components/commit/5bc840b97fd1020c5e9f46d803fe5147bc65fb1a))
+
 # [2.3.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.2.1...v2.3.0) (2022-08-14)
 
 
