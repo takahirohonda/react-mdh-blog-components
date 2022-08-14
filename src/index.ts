@@ -9,3 +9,4 @@ export * from './Components/FlipCard'
 export * from './Components/FlipCards'
 
 export * from './Components/Graphics/Icons'
+export * from './Components/Typography/Heading'

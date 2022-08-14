@@ -29,3 +29,13 @@ export const LatoRegular = css`
   ${Lato}
   ${RegularFontWeight}
 `
+
+export const MerriweatherRegular = css`
+  ${Merriweather}
+  ${RegularFontWeight}
+`
+
+export const MerriweatherBold = css`
+  ${Merriweather}
+  ${BoldFontWeight}
+`
