@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.2.1...v2.3.0) (2022-08-14)
+
+
+### Features
+
+* **heading:** add Heading and update breakpoint ([8888d69](https://github.com/mydatahack/react-mdh-blog-components/commit/8888d69ca3e0fd2fbe694e4605fcece35fd62798))
+
 ## [2.2.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.2.0...v2.2.1) (2022-07-24)
 
 
