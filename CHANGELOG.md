@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.3.1...v2.4.0) (2022-09-03)
+
+
+### Features
+
+* **contentcontainer:** add ContentContainer ([a8d8483](https://github.com/mydatahack/react-mdh-blog-components/commit/a8d848322f8b2f06c6a9a96f024eff000b5a11b8))
+
 ## [2.3.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.3.0...v2.3.1) (2022-08-14)
 
 
