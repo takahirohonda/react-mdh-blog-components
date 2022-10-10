@@ -1,3 +1,11 @@
+# [2.5.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.4.0...v2.5.0) (2022-10-10)
+
+
+### Features
+
+* **re-release:** update github action node version for release ([5f01c3e](https://github.com/mydatahack/react-mdh-blog-components/commit/5f01c3e522116e02567658f41411388670a87753))
+* **theme:** add styled component theme ([a646234](https://github.com/mydatahack/react-mdh-blog-components/commit/a646234d54e533f396f72e348a428f285b11e330))
+
 # [2.4.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.3.1...v2.4.0) (2022-09-03)
 
 
