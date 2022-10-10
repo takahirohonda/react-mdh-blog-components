@@ -1,3 +1,5 @@
 export * from './globalStyles'
 export * from './breakpoints'
+export * from './colours'
 export * from './fonts'
+export * from './theme'

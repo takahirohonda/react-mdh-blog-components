@@ -12,20 +12,18 @@ export default {
   },
 }
 
-const TextRegularTemplate: Story = () => (
+export const TextRegular: Story = () => (
   <Typography.StyledTextRegular>
     This is used for a regular text.
   </Typography.StyledTextRegular>
 )
 
-export const TextRegular = TextRegularTemplate.bind({})
-
-const TextRegularNoSizeChangeOnMobileTemplate: Story = () => (
+export const TextRegularNoSizeChangeOnMobile: Story = () => (
   <Typography.StyledTextRegularNoSizeChangeOnMobile>
     This is used for regular text with no size change on mobile.
   </Typography.StyledTextRegularNoSizeChangeOnMobile>
 )
 
-export const TextRegularNoSizeChangeOnMobile = TextRegularNoSizeChangeOnMobileTemplate.bind(
-  {}
+export const TestColourTheme: Story = () => (
+  <Typography.TestColourTheme>Testing colour theme</Typography.TestColourTheme>
 )
