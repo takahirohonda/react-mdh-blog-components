@@ -14,3 +14,7 @@ export const StyledTextRegularNoSizeChangeOnMobile = styled.p`
   ${LatoRegular};
   font-size: 1rem;
 `
+
+export const TestColourTheme = styled.p`
+  color: ${({ theme }) => theme.colours.PRIMARY_RED};
+`
