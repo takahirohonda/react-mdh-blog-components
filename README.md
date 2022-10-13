@@ -13,5 +13,6 @@ Make sure to use the correct node version (16.10.0)
 ```bash
 nvm install 16.10.0
 nvm alias default 16.10.0
+npm install yarn --global
 yarn install
 ```
