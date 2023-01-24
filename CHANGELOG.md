@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.0...v2.5.1) (2023-01-24)
+
+
+### Bug Fixes
+
+* **flipcard:** add scroll bar for desktop ([2a042f2](https://github.com/mydatahack/react-mdh-blog-components/commit/2a042f2391ede0e225cdf9be19cc40dda001ee70))
+
 # [2.5.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.4.0...v2.5.0) (2022-10-10)
 
 
