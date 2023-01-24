@@ -7,3 +7,5 @@ export * from './Components/FlipCards'
 export * from './Components/Graphics/Icons'
 export * from './Components/Typography'
 export * from './Components/Typography/Heading'
+
+export * from './styles/breakpoints'
