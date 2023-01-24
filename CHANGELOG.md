@@ -1,3 +1,10 @@
+## [2.5.3](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.2...v2.5.3) (2023-01-24)
+
+
+### Bug Fixes
+
+* **breakpoint:** export breakpoints ([a3b7d78](https://github.com/mydatahack/react-mdh-blog-components/commit/a3b7d784d1edf432a775a6647eff8b7dc717567a))
+
 ## [2.5.2](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.1...v2.5.2) (2023-01-24)
 
 
