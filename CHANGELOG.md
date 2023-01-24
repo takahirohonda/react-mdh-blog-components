@@ -1,3 +1,10 @@
+## [2.5.2](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.1...v2.5.2) (2023-01-24)
+
+
+### Bug Fixes
+
+* **flipcards:** update the media query breakpoint for flip card ([684716b](https://github.com/mydatahack/react-mdh-blog-components/commit/684716b22cde535e87ecfbf5f9ca06d10ab0e639))
+
 ## [2.5.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.0...v2.5.1) (2023-01-24)
 
 
