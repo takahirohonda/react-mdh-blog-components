@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { BREAKPOINT } from 'styles'
 
 export interface StyledFlipCardCarouselUlProps {
   width: string
@@ -13,10 +14,13 @@ export const StyledFlipCardCarouselUl = styled.ul<StyledFlipCardCarouselUlProps>
   scroll-snap-type: x mandatory;
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
 
-  &::-webkit-scrollbar {
-    display: none;
+  @media only screen and (max-width: ${BREAKPOINT.XS}px) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `
 
