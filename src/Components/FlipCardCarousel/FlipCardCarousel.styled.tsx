@@ -17,7 +17,7 @@ export const StyledFlipCardCarouselUl = styled.ul<StyledFlipCardCarouselUlProps>
   overflow-x: scroll;
   overflow-y: hidden;
 
-  @media only screen and (max-width: ${BREAKPOINT.XS}px) {
+  @media only screen and (max-width: ${BREAKPOINT.SM}px) {
     &::-webkit-scrollbar {
       display: none;
     }
