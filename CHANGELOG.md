@@ -1,3 +1,5 @@
+# [3.0.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.3...v3.0.0) (2023-08-04)
+
 ## [2.5.3](https://github.com/mydatahack/react-mdh-blog-components/compare/v2.5.2...v2.5.3) (2023-01-24)
 
 
