@@ -14,6 +14,7 @@ const commitAnalyzerPlugin = [
       { type: 'perf', release: 'patch' },
       { type: 'docs', scope: 'README', release: 'patch' },
     ],
+    preset: 'conventionalcommits',
   },
 ]
 
@@ -40,7 +41,12 @@ module.exports = {
     // generate release notes
     '@semantic-release/release-notes-generator',
     // put generated release notes into a changelog
-    '@semantic-release/changelog',
+    [
+      '@semantic-release/changelog',
+      {
+        preset: 'conventionalcommits',
+      },
+    ],
     // publish package
     publishPackagePlugin,
     // commit changelog and version changes
