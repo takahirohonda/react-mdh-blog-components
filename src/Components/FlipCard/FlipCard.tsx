@@ -26,6 +26,9 @@ const flipTransition = {
 }
 
 export interface FlipCardProps {
+  /**
+   * Example of adding a comment to storybook doc prop table...
+   */
   frontContent: ReactNode
   backContent: ReactNode
 }

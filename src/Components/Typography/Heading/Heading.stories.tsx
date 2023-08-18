@@ -8,6 +8,7 @@ const HeadingControl = {
   control: {
     type: 'select',
   },
+  description: 'This determines the style.',
 }
 
 export default {

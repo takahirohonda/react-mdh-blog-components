@@ -12,6 +12,11 @@ export enum HeadingStyles {
 }
 
 export interface HeadingProps {
+  /**
+   * This comment will not be displayed in the storybook prop table
+   * because withStyle has argTypes in the story
+   * and it will override the auto docgen.
+   */
   withStyles?: HeadingStyles
   className?: string
   children: ReactNode
