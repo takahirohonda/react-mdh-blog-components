@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/mydatahack/react-mdh-blog-components/compare/v4.0.0...v4.0.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* **node:** update node version for release ([334c275](https://github.com/mydatahack/react-mdh-blog-components/commit/334c275bfdb1d74bee0253df10b895906f53c088))
+
 # [4.0.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v3.0.0...v4.0.0) (2024-02-02)
 
 
