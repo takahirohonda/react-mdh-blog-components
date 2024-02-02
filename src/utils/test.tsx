@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { render, RenderOptions } from '@testing-library/react'
 import { renderHook, RenderHookOptions } from '@testing-library/react-hooks'
 import userEvent from '@testing-library/user-event'
@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components'
 
 import { theme } from '../styles/theme'
 
-const ThemeWrapper: React.FC = ({ children }) => {
+const ThemeWrapper = ({ children }: { children?: any }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 
