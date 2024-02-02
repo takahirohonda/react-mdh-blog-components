@@ -6,7 +6,6 @@ module.exports = {
     '@storybook/addon-actions',
     'storybook-addon-designs',
     '@storybook/addon-essentials',
-    'storybook-addon-apollo-client',
     'storybook-addon-pseudo-states',
     '@storybook/preset-create-react-app',
   ],
