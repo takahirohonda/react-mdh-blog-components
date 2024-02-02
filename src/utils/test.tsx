@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 
 import { theme } from '../styles/theme'
 
+// children: ReactNode will error after upgrading to node 20...
 const ThemeWrapper = ({ children }: { children?: any }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
