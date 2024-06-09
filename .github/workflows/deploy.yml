@@ -35,7 +35,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.GIT_PAGE_DEPLOY_MDH_COMPONENT }}
           BRANCH: master # The branch the action should deploy to.
           FOLDER: storybook-static # The folder the action should deploy.
-          REPOSITORY_NAME: mydatahack/mydatahack.github.io
+          REPOSITORY_NAME: takahirohonda/takahirohonda.github.io
           TARGET_FOLDER: mdh-blog-components
           CLEAN: true # Automatically remove deleted files from the deploy branch
 
