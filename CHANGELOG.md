@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v4.1.0...v4.2.0) (2025-01-23)
+
+
+### Features
+
+* add Carousel - in progress ([977142e](https://github.com/mydatahack/react-mdh-blog-components/commit/977142e128f2f756589889d14fefb907db62cec8))
+
 # [4.1.0](https://github.com/mydatahack/react-mdh-blog-components/compare/v4.0.1...v4.1.0) (2025-01-23)
 
 
