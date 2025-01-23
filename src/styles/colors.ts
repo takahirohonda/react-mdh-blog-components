@@ -1,0 +1,139 @@
+export const COLOR = {
+  WHITE: '#FFFFFF',
+  /** Use BLACK_900 instead. */
+  BLACK: '#212322',
+  BLACK_900: '#212322',
+  DARK_BLUE: '#415464',
+  CORAL: '#F7976E',
+
+  GREEN_1600: '#00872B',
+  GREEN_1000: '#62CB84',
+  GREEN_700: '#91DBA9',
+  GREEN_500: '#B0E5C2',
+  GREEN_120: '#ECF9F0',
+  GREEN_80: '#F2FBF5',
+  BLUE_1000: '#0071CE',
+  BLUE_700: '#3D7DCA',
+  BLUE_400: '#7BAED4',
+  BLUE_120: '#D7E7F2',
+  BLUE_100: '#DBF5FF',
+  BLUE_80: '#E8F2FB',
+  BLUE_60: '#F0FBFF',
+  BLUE_50: '#F7FAFD',
+  GREY_800: '#323434',
+  GREY_700: '#4D5151',
+  GREY_580: '#686D6E',
+  GREY_550: '#6D7274',
+  GREY_470: '#858B8E',
+  GREY_400: '#989D9F',
+  GREY_250: '#BBC0C3',
+  GREY_150: '#D9DCDE',
+  GREY_90: '#E6E9EA',
+  GREY_60: '#EEF0F2',
+  GREY_30: '#F6F7F9',
+  GREY_20: '#FBFBFB',
+  RED_1000: '#E42C07',
+  RED_700: '#EE8274',
+  RED_400: '#F5B7B0',
+  RED_120: '#FCEAE7',
+  RED_80: '#FDF1EF',
+  RED_40: '#FEF7F6',
+  ORANGE_1000: '#FF9900', // To be deprecated post EZTA migration
+  YELLOW_1000: '#F4BE49',
+  YELLOW_700: '#F7D180',
+  YELLOW_400: '#FBE5B6',
+  YELLOW_120: '#FEF7E9',
+  YELLOW_80: '#FEFAF0',
+  YELLOW_60: '#FFFCF5',
+
+  BRIGHT_GREEN: '#C5FF33',
+  BRIGHT_ORANGE: '#F96939',
+
+  POS_DARK_BLUE: '#005588',
+  POS_MID_BLUE: '#44AADD',
+  POS_LIGHT_BLUE: '#77CCDD',
+  POS_DARK_GREEN: '#448866',
+  POS_MID_GREEN: '#77BB66',
+  POS_LIGHT_GREEN: '#AADDAA',
+  POS_DARK_ORANGE: '#BB7766',
+  POS_MID_ORANGE: '#EE9966',
+  POS_LIGHT_ORANGE: '#EEBB55',
+} as const
+
+export type ColorProps = typeof COLOR
+export type ColorName = keyof ColorProps
+export type ColorValue = ColorProps[ColorName]
+
+export const getColorWithName = (colorName?: string | null) => {
+  if (!colorName) {
+    return undefined
+  }
+
+  if (!Object.keys(COLOR).includes(colorName)) {
+    return undefined
+  }
+
+  return COLOR[colorName as ColorName]
+}
+
+/**
+ * @deprecated This enum is redundant, use COLOR const
+ */
+export enum COLOR_NAME {
+  /** POS */
+  POS_DARK_BLUE = 'POS_DARK_BLUE',
+  POS_MID_BLUE = 'POS_MID_BLUE',
+  POS_LIGHT_BLUE = 'POS_LIGHT_BLUE',
+  POS_DARK_GREEN = 'POS_DARK_GREEN',
+  POS_MID_GREEN = 'POS_MID_GREEN',
+  POS_LIGHT_GREEN = 'POS_LIGHT_GREEN',
+  POS_DARK_ORANGE = 'POS_DARK_ORANGE',
+  POS_MID_ORANGE = 'POS_MID_ORANGE',
+  POS_LIGHT_ORANGE = 'POS_LIGHT_ORANGE',
+
+  WHITE = 'WHITE',
+  /** Use BLACK_900 instead. */
+  BLACK = 'BLACK',
+  BLACK_900 = 'BLACK_900',
+  CORAL = 'CORAL',
+  DARK_BLUE = 'DARK_BLUE',
+  GREEN_1600 = 'GREEN_1600',
+  GREEN_1000 = 'GREEN_1000',
+  GREEN_700 = 'GREEN_700',
+  GREEN_500 = 'GREEN_500',
+  GREEN_120 = 'GREEN_120',
+  GREEN_80 = 'GREEN_80',
+  BLUE_1000 = 'BLUE_1000',
+  BLUE_700 = 'BLUE_700',
+  BLUE_400 = 'BLUE_400',
+  BLUE_120 = 'BLUE_120',
+  BLUE_50 = 'BLUE_50',
+  BLUE_80 = 'BLUE_80',
+  GREY_800 = 'GREY_800',
+  GREY_700 = 'GREY_700',
+  GREY_580 = 'GREY_580',
+  GREY_550 = 'GREY_550',
+  GREY_470 = 'GREY_470',
+  GREY_400 = 'GREY_400',
+  GREY_250 = 'GREY_250',
+  GREY_150 = 'GREY_150',
+  GREY_90 = 'GREY_90',
+  GREY_60 = 'GREY_60',
+  GREY_30 = 'GREY_30',
+  GREY_20 = 'GREY_20',
+  RED_1000 = 'RED_1000',
+  RED_700 = 'RED_700',
+  RED_400 = 'RED_400',
+  RED_120 = 'RED_120',
+  RED_80 = 'RED_80',
+  RED_40 = 'RED_40',
+  ORANGE_1000 = 'ORANGE_1000',
+  YELLOW_1000 = 'YELLOW_1000',
+  YELLOW_700 = 'YELLOW_700',
+  YELLOW_400 = 'YELLOW_400',
+  YELLOW_120 = 'YELLOW_120',
+  YELLOW_80 = 'YELLOW_80',
+  YELLOW_60 = 'YELLOW_60',
+  BRIGHT_ORANGE = 'BRIGHT_ORANGE',
+  BRIGHT_GREEN = 'BRIGHT_GREEN',
+}

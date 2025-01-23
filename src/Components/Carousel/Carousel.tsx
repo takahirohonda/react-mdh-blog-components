@@ -8,6 +8,7 @@ import {
 } from 'react'
 
 import * as styled from './Carousel.styled'
+import { NavArrow } from './NavArrow/NavArrow'
 
 export interface CarouselProps {
   slideComponents: (() => JSX.Element)[]
@@ -39,7 +40,7 @@ export const Carousel = ({
   const totalSlideNumber = SlideComponents.length
   const currentIndex = setSlideIndex ? slideIndex : slideIndexUncontrolled
   const isFirstSlide = currentIndex === 0
-  const isLastSlide = currentIndex === totalSlideNumber
+  const isLastSlide = currentIndex === totalSlideNumber - 1
 
   const slides = SlideComponents.map((slideComponent, index) => ({
     key: `slide-${index}`,
@@ -75,10 +76,10 @@ export const Carousel = ({
   }, [setSlideIndex, slideIndex, slideIndexUncontrolled, totalSlideNumber])
 
   const goToPrevSlide = useCallback(() => {
-    if (setSlideIndex && slideIndex && slideIndex > 0) {
-      setSlideIndex(slideIndex + 1)
+    if (setSlideIndex && slideIndex !== undefined && slideIndex > 0) {
+      setSlideIndex(slideIndex - 1)
     } else if (slideIndexUncontrolled > 0) {
-      setSlideIndexUncontrolled((prev) => prev + 1)
+      setSlideIndexUncontrolled((prev) => prev - 1)
     }
   }, [setSlideIndex, slideIndex, slideIndexUncontrolled])
 
@@ -103,16 +104,20 @@ export const Carousel = ({
       </styled.CarouselContainer>
       {hasArrowNavigation && (
         <>
-          <styled.NextSlideArrow
-            direction="left"
-            shouldShow={isFirstSlide}
-            handleClick={goToPrevSlide}
-          />
-          <styled.NextSlideArrow
-            direction="right"
-            shouldShow={isLastSlide}
-            handleClick={goToNextSlide}
-          />
+          <styled.ArrowWrapper direction="left">
+            <NavArrow
+              direction="left"
+              disabled={isFirstSlide}
+              handleClick={goToPrevSlide}
+            />
+          </styled.ArrowWrapper>
+          <styled.ArrowWrapper direction="right">
+            <NavArrow
+              direction="right"
+              disabled={isLastSlide}
+              handleClick={goToNextSlide}
+            />
+          </styled.ArrowWrapper>
         </>
       )}
     </styled.CarouselSection>

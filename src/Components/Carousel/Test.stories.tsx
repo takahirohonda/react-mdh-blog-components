@@ -1,8 +1,6 @@
-import { Story } from '@storybook/react'
-import { ContentContainer } from 'Components/ContentContainer'
-import styled from 'styled-components'
+import { Meta, Story } from '@storybook/react'
 
-import { Carousel } from './Carousel'
+import { Carousel as CarouselComponent, CarouselProps } from './Carousel'
 
 // Sample slide components
 const UnicornSlide = () => (
@@ -24,16 +22,60 @@ const SlothSlide = () => (
 const SlideComponents = [UnicornSlide, FoxSlide, SlothSlide]
 
 export default {
-  title: 'Components/TESTTEST',
-  component: Carousel,
-  docs: {
-    description: {
-      component:
-        'For wrapping the content. Adjust the width according to the screen size.',
+  title: 'Components/Carousel-Test-Stories',
+  component: CarouselComponent,
+  argTypes: {
+    slideIndex: { control: 'number', defaultValue: 0 },
+    hasArrowNavigation: { control: 'boolean', defaultValue: true },
+    hasDotNavigation: { control: 'boolean', defaultValue: true },
+    customHeight: { control: 'text', defaultValue: '300px' },
+    bgColor: { control: 'color', defaultValue: '#fff' },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: 'Carousel Component',
+      },
     },
   },
+} as Meta
+
+const Template: Story<CarouselProps> = (args) => (
+  <CarouselComponent {...args} slideComponents={SlideComponents} />
+)
+
+export const DefaultCarousel = Template.bind({})
+DefaultCarousel.args = {
+  slideIndex: 0,
+  hasArrowNavigation: true,
+  hasDotNavigation: true,
+  customHeight: '300px',
+  bgColor: '#fff',
 }
 
-export const CarouselComponent: Story = () => (
-  <Carousel slideComponents={SlideComponents} hasArrowNavigation />
-)
+export const WithoutNavigation = Template.bind({})
+WithoutNavigation.args = {
+  slideIndex: 0,
+  hasArrowNavigation: false,
+  hasDotNavigation: false,
+  customHeight: '300px',
+  bgColor: '#fff',
+}
+
+export const CustomHeightCarousel = Template.bind({})
+CustomHeightCarousel.args = {
+  slideIndex: 0,
+  hasArrowNavigation: true,
+  hasDotNavigation: true,
+  customHeight: '500px',
+  bgColor: '#f0f0f0',
+}
+
+export const CustomBackgroundCarousel = Template.bind({})
+CustomBackgroundCarousel.args = {
+  slideIndex: 0,
+  hasArrowNavigation: true,
+  hasDotNavigation: true,
+  customHeight: '300px',
+  bgColor: '#e0f7fa',
+}

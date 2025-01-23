@@ -1,19 +1,22 @@
 import styled from 'styled-components'
 
 import { BREAKPOINT } from '../../styles/breakpoints'
-import { NavArrow, NavArrowProps } from './NavArrow/NavArrow'
+import { NavArrowProps } from './NavArrow/NavArrow'
 
 export const CarouselSection = styled.section<{
   customHeight?: string
   bgColor?: string
 }>`
+  display: flex;
+  flex-direction: column;
   height: ${({ customHeight }) => customHeight || '471px'};
   width: 100%;
   position: relative;
   width: 100%;
   max-width: 864px;
   margin: 0 auto;
-  overflow-y: hidden;
+
+  overflow-x: hidden;
   img {
     display: block;
     max-width: 864px;
@@ -24,7 +27,12 @@ export const CarouselSection = styled.section<{
     }
   }
   background-color: ${({ theme, bgColor }) =>
-    bgColor === 'transparent' ? 'transparent' : bgColor || '#D9DCDE'};
+    bgColor === 'transparent'
+      ? 'transparent'
+      : // : bgColor || theme.color.GREY_150};
+        bgColor ?? '#D9DCDE'};
+
+  margin: 16px;
 `
 
 export const CarouselContainer = styled.div<{
@@ -32,6 +40,7 @@ export const CarouselContainer = styled.div<{
   currentIndex: number
 }>`
   display: flex;
+  flex-grow: 1;
   width: 100%;
   transition: transform 300ms ease-in-out;
   transform: ${({ computedWidth, currentIndex }) =>
@@ -45,15 +54,20 @@ export const SliderContentContainer = styled.div<{
   width: ${({ computedWidth }) => `${computedWidth}px`};
   display: flex;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: middle;
   scroll-snap-align: center;
   scroll-snap-stop: always;
 `
 
-export const NextSlideArrow = styled(NavArrow)<NavArrowProps>`
+export const ArrowWrapper = styled.div<{
+  direction: NavArrowProps['direction']
+}>`
   ${({ direction }) => (direction === 'left' ? 'left: 0' : 'right: 0')};
-  ${({ shouldShow }) => (shouldShow ? 'display: none' : 'display: block')};
   position: absolute;
   top: 50%;
-  left: 0;
   padding: 16px 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
 `
