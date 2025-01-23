@@ -27,7 +27,7 @@ export default create({
   inputTextColor: 'black',
   inputBorderRadius: 4,
 
-  brandTitle: 'MyDatahack Design System',
-  brandUrl: 'https://www.mydatahack.com',
+  brandTitle: 'Design System with styled-components',
+  brandUrl: 'https://github.com/takahirohonda',
   // brandImage: 'logos/mdh_logo.svg',
 })
