@@ -1,15 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import commonjs from '@rollup/plugin-commonjs'
+import image from '@rollup/plugin-image'
 import json from '@rollup/plugin-json'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import url from '@rollup/plugin-url'
 import svgr from '@svgr/rollup'
 import css from 'rollup-plugin-import-css'
+import includePaths from 'rollup-plugin-includepaths'
 import externals from 'rollup-plugin-node-externals'
 import { visualizer } from 'rollup-plugin-visualizer'
-import includePaths from 'rollup-plugin-includepaths'
-import image from '@rollup/plugin-image'
 
 export default {
   input: ['src/index.ts'],
