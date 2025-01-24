@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-import { ButtonBasic } from '../../Button'
 import { SvgIcon } from '../../SvgIcon'
 
-export const StyledNavArrowButton = styled(ButtonBasic)`
+export const StyledNavArrowButton = styled.button`
   background-color: transparent;
   border: 0;
   margin: 0;
