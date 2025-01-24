@@ -1,13 +1,6 @@
 import '@brainhubeu/react-carousel/lib/style.css'
 
-import {
-  type HTMLAttributes,
-  type ReactNode,
-  Children,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react'
+import { Children, useCallback, useEffect, useState } from 'react'
 import * as ReactCarousel from '@brainhubeu/react-carousel'
 
 import { usePrevious } from '../../hooks/usePrevious/usePrevious'
@@ -16,10 +9,10 @@ import { NavArrow } from './NavArrow/NavArrow'
 
 export interface CarouselProps {
   bgColor?: string
-  children?: ReactNode
+  children?: React.ReactNode
   customHeight?: string
-  forwardedDotsProps?: HTMLAttributes<HTMLElement>
-  forwardedProps?: HTMLAttributes<HTMLElement>
+  forwardedDotsProps?: React.HTMLAttributes<HTMLElement>
+  forwardedProps?: React.HTMLAttributes<HTMLElement>
   hasArrowNavigation?: boolean
   hasDotNavigation?: boolean
   onSlide?: (activeIndex: number, previousIndex: number) => void
@@ -48,10 +41,9 @@ export const Carousel = ({
   setSlideIndex,
   slideIndex,
 }: CarouselProps) => {
-  const onChange = useCallback(
-    (index: number) => setSlideIndex(index),
-    [setSlideIndex]
-  )
+  const onChange = useCallback((index: number) => setSlideIndex(index), [
+    setSlideIndex,
+  ])
 
   const previousSlideIndex = usePrevious(slideIndex)
 
