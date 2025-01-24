@@ -1,5 +1,19 @@
 # [4.1.0](https://github.com/takahirohonda/react-mdh-blog-components/compare/v4.0.1...v4.1.0) (2025-01-24)
 
+
+### Bug Fixes
+
+* fix react issue ([ea924cf](https://github.com/takahirohonda/react-mdh-blog-components/commit/ea924cf8a88cd79d608dc3bc6dd2a50ee45d5607))
+* fix tests ([79af4dd](https://github.com/takahirohonda/react-mdh-blog-components/commit/79af4dd86bffff76e380edb5f6534e5a930a09e9))
+* update ([67089b1](https://github.com/takahirohonda/react-mdh-blog-components/commit/67089b1c3d4c3189d4c5b12213ab58283af6d952))
+
+
+### Features
+
+* Carousel update ([325bc36](https://github.com/takahirohonda/react-mdh-blog-components/commit/325bc364f2eeb2d760ed1c82d52d7341d5323661))
+
+# [4.1.0](https://github.com/takahirohonda/react-mdh-blog-components/compare/v4.0.1...v4.1.0) (2025-01-24)
+
 ### Bug Fixes
 
 - fix react issue ([ea924cf](https://github.com/takahirohonda/react-mdh-blog-components/commit/ea924cf8a88cd79d608dc3bc6dd2a50ee45d5607))
