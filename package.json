@@ -7,7 +7,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "author": "mdh",
+  "author": "tk",
   "license": "MIT",
   "description": "React components using styled-component",
   "keywords": [
