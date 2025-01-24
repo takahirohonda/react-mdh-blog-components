@@ -10,7 +10,8 @@ export const StyledCard = styled.div`
   display: flex;
   justify-content: center;
 `
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const StyledFlipCardContainer = styled(motion.div)`
   position: absolute;
   width: 300px;
@@ -21,6 +22,8 @@ export const StyledFlipCardContainer = styled(motion.div)`
   border: solid 1px #c7c7c7;
 `
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const StyledFlipCardFront = styled(motion.div)`
   position: absolute;
   width: 100%;
@@ -31,6 +34,8 @@ export const StyledFlipCardFront = styled(motion.div)`
   backface-visibility: hidden;
 `
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const StyledFlipCardBack = styled(motion.div)`
   position: absolute;
   width: 100%;

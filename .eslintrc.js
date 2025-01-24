@@ -119,10 +119,6 @@ module.exports = {
     },
     'import/resolver': {
       typescript: {},
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/'],
-      },
     },
   },
   overrides: [
