@@ -20,7 +20,10 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true,
     "sourceMap": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "paths": {
+      "react": ["node_modules/react"]
+    }
   },
   "include": ["src"],
   "exclude": [
