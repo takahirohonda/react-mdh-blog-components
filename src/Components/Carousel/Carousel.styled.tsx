@@ -6,6 +6,7 @@ import { NavArrowProps } from './NavArrow/NavArrow'
 export const CarouselSection = styled.section<{
   customHeight?: string
   bgColor?: string
+  hasDotNavigation?: boolean
 }>`
   display: flex;
   flex-direction: column;
@@ -27,6 +28,8 @@ export const CarouselSection = styled.section<{
   }
   background-color: ${({ theme, bgColor }) => bgColor ?? theme.colors.GREY_60};
   margin: 0 auto;
+  padding-bottom: ${({ hasDotNavigation }) =>
+    hasDotNavigation ? '32px' : '0'};
 `
 
 export const CarouselContainer = styled.ul<{
@@ -67,4 +70,11 @@ export const ArrowWrapper = styled.div<{
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 10;
+`
+
+export const DotWrapper = styled.div`
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
 `

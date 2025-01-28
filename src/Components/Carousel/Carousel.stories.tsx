@@ -43,6 +43,23 @@ export const CarouselUncontrolled: StoryObj<CarouselProps> = {
   render: () => <CarouselUncontrolledUsage />,
 }
 
+const CarouselUncontrolledUsageWithDotNav = () => (
+  <CarouselComponent hasArrowNavigation hasDotNavigation>
+    {slides.map((slide) => (
+      <div
+        key={slide.content}
+        style={{ padding: '20px', backgroundColor: slide.bg, width: '80%' }}
+      >
+        {slide.content}
+      </div>
+    ))}
+  </CarouselComponent>
+)
+
+export const CarouselUncontrolledWithDotNav: StoryObj<CarouselProps> = {
+  render: () => <CarouselUncontrolledUsageWithDotNav />,
+}
+
 const CarouselControlledUsage = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 

@@ -34,9 +34,7 @@ export const Wrapper = styled.div<{
   .BrainhubCarousel__container {
     width: 100%;
     background-color: ${({ theme, bgColor }) =>
-      bgColor === 'transparent'
-        ? 'transparent'
-        : bgColor || theme.colors.GREY_150};
+      bgColor ?? theme.colors.GREY_60};
     height: ${({ customHeight }) => customHeight || '471px'};
   }
 `
