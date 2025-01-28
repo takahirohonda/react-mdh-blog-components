@@ -25,11 +25,7 @@ export const CarouselSection = styled.section<{
       width: 100%;
     }
   }
-  background-color: ${({ theme, bgColor }) =>
-    bgColor === 'transparent'
-      ? 'transparent'
-      : bgColor || theme.colors.GREY_150};
-
+  background-color: ${({ theme, bgColor }) => bgColor ?? theme.colors.GREY_60};
   margin: 0 auto;
 `
 
