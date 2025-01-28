@@ -14,7 +14,6 @@ export const StyledArrowIcon = styled(SvgIcon)<{
 }>`
   svg * {
     fill: ${({ theme: { colors }, disabled }) =>
-      // disabled ? 'transparent' : colors.GREY_250};
-      disabled ? 'transparent' : '#BBC0C3'};
+      disabled ? 'transparent' : colors.GREY_250};
   }
 `

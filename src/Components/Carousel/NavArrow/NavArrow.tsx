@@ -5,14 +5,12 @@ import { StyledArrowIcon, StyledNavArrowButton } from './NavArrow.styled'
 export interface NavArrowProps {
   direction: 'left' | 'right'
   handleClick: () => void
-
   disabled?: boolean
 }
 
 export const NavArrow = ({
   direction,
   disabled,
-
   handleClick,
 }: NavArrowProps) => {
   return (
@@ -20,6 +18,7 @@ export const NavArrow = ({
       type="button"
       data-testid={`navigation-arrow-${direction}`}
       onClick={handleClick}
+      disabled={disabled}
     >
       <StyledArrowIcon height="13" width="13" disabled={disabled}>
         {direction === 'left' ? <LeftArrow /> : <RightArrow />}

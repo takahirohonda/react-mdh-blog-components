@@ -7,8 +7,9 @@ import React, {
 } from 'react'
 
 import * as styled from './Carousel.styled'
-import { handleSlideAction } from './Carousel.utils'
+import { handleSlideAction } from './handleSlideAction'
 import { NavArrow } from './NavArrow/NavArrow'
+import { setWidth } from './setWidth'
 
 export interface CarouselProps {
   children: ReactNode
@@ -20,7 +21,7 @@ export interface CarouselProps {
    */
   hasDotNavigation?: boolean
   setSlideIndex?: React.Dispatch<React.SetStateAction<number>>
-  onSlide?: (activeIndex: number, previousIndex: number) => void
+  onSlide?: (activeIndex?: number, previousIndex?: number) => void
   slideIndex?: number
 }
 
@@ -39,16 +40,14 @@ export const Carousel = ({
   const [computedWidth, setComputedWidth] = useState(0)
 
   const totalSlideNumber = React.Children.count(children)
+
   const currentIndex = setSlideIndex ? slideIndex : slideIndexUncontrolled
   const isFirstSlide = currentIndex === 0
   const isLastSlide = currentIndex === totalSlideNumber - 1
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
-      const sectionWidth = entries[0].contentRect.width
-      if (sectionWidth) {
-        setComputedWidth(sectionWidth)
-      }
+      setWidth(entries, setComputedWidth)
     })
 
     const currentRef = carouselSectionRef.current
@@ -64,15 +63,19 @@ export const Carousel = ({
   }, [])
 
   const goToNextSlide = useCallback(() => {
-    if (setSlideIndex && slideIndex && slideIndex < totalSlideNumber - 1) {
+    if (
+      setSlideIndex &&
+      slideIndex !== undefined &&
+      slideIndex < totalSlideNumber
+    ) {
       handleSlideAction({
         currentSlideIndex: slideIndex,
         setSlideIndex,
         onSlideCallback: onSlide,
       })
-    } else if (slideIndexUncontrolled < totalSlideNumber - 1) {
+    } else if (slideIndexUncontrolled < totalSlideNumber) {
       handleSlideAction({
-        currentSlideIndex: slideIndexUncontrolled,
+        currentSlideIndex: slideIndex ?? 0,
         setSlideIndex: setSlideIndexUncontrolled,
         onSlideCallback: onSlide,
       })
@@ -86,16 +89,16 @@ export const Carousel = ({
   ])
 
   const goToPrevSlide = useCallback(() => {
-    if (setSlideIndex && slideIndex !== undefined && slideIndex > 0) {
+    if (setSlideIndex && slideIndex !== undefined && slideIndex >= 0) {
       handleSlideAction({
         currentSlideIndex: slideIndex,
         setSlideIndex,
         onSlideCallback: onSlide,
         isGoingNext: false,
       })
-    } else if (slideIndexUncontrolled > 0) {
+    } else if (slideIndexUncontrolled >= 0) {
       handleSlideAction({
-        currentSlideIndex: slideIndexUncontrolled,
+        currentSlideIndex: slideIndex ?? 0,
         setSlideIndex: setSlideIndexUncontrolled,
         onSlideCallback: onSlide,
         isGoingNext: false,
@@ -113,13 +116,16 @@ export const Carousel = ({
         computedWidth={computedWidth}
         currentIndex={currentIndex ?? 0}
       >
-        {React.Children.map(children, (child) => {
+        {React.Children.map(children, (child, index) => {
           if (!React.isValidElement(child)) {
             return null
           }
 
           return (
-            <styled.SliderContentContainer computedWidth={computedWidth}>
+            <styled.SliderContentContainer
+              computedWidth={computedWidth}
+              data-testid={`slider-content-container-${index}`}
+            >
               {React.cloneElement(child, {
                 ...child.props,
               })}
