@@ -28,26 +28,27 @@ export const CarouselSection = styled.section<{
   background-color: ${({ theme, bgColor }) =>
     bgColor === 'transparent'
       ? 'transparent'
-      : // : bgColor || theme.color.GREY_30};
-        bgColor ?? '#F6F7F9'};
+      : bgColor || theme.colors.GREY_150};
 
-  margin: 16px;
+  margin: 0 auto;
 `
 
-export const CarouselContainer = styled.div<{
+export const CarouselContainer = styled.ul<{
   computedWidth: number
   currentIndex: number
 }>`
   display: flex;
   flex-grow: 1;
   width: 100%;
-  transition: transform 300ms ease-in-out;
+  transition: transform 400ms ease-in-out;
   transform: ${({ computedWidth, currentIndex }) =>
     `translateX(-${currentIndex * computedWidth}px)`};
   scroll-snap-type: x mandatory;
+  margin: 0;
+  padding: 0;
 `
 
-export const SliderContentContainer = styled.div<{
+export const SliderContentContainer = styled.li<{
   computedWidth: number
 }>`
   width: ${({ computedWidth }) => `${computedWidth}px`};
@@ -57,6 +58,7 @@ export const SliderContentContainer = styled.div<{
   align-items: middle;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  list-style: none;
 `
 
 export const ArrowWrapper = styled.div<{
