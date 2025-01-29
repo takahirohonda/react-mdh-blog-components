@@ -10,6 +10,7 @@ import { debounce } from 'lodash-es'
 import * as styled from './Carousel.styled'
 import { handleSlideAction } from './handleSlideAction'
 import { NavArrow } from './NavArrow/NavArrow'
+import { NavDot } from './NavDot/NavDot'
 import { setWidth } from './setWidth'
 
 export interface CarouselProps {
@@ -21,6 +22,7 @@ export interface CarouselProps {
    * Not implemented yet
    */
   hasDotNavigation?: boolean
+  navDotColour?: string
   setSlideIndex?: React.Dispatch<React.SetStateAction<number>>
   onSlide?: (activeIndex?: number, previousIndex?: number) => void
   slideIndex?: number
@@ -32,6 +34,7 @@ export const Carousel = ({
   customHeight,
   hasArrowNavigation,
   hasDotNavigation = false,
+  navDotColour,
   onSlide,
   setSlideIndex,
   slideIndex,
@@ -155,10 +158,14 @@ export const Carousel = ({
         </>
       )}
       {hasDotNavigation && (
-        <div>
-          <div>DotNavigation</div>
-          <div>This will be implemented later.</div>
-        </div>
+        <styled.DotWrapper>
+          <NavDot
+            totalSlideNumber={totalSlideNumber}
+            currentSlideIndex={currentIndex ?? 0}
+            dotColour={navDotColour}
+            setSlideIndex={setSlideIndex ?? setSlideIndexUncontrolled}
+          />
+        </styled.DotWrapper>
       )}
     </styled.CarouselSection>
   )
