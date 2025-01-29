@@ -21,7 +21,7 @@ describe('Carousel Component', () => {
   }
 
   describe('Uncontrolled', () => {
-    it('should work as expected', () => {
+    it('should work as expected', async () => {
       const onSlideCallbackMock = jest.fn()
       setup({ onSlide: onSlideCallbackMock })
       // checking all the slides are in the document.
@@ -34,25 +34,33 @@ describe('Carousel Component', () => {
 
       // Go next 1.
       userEvent.click(screen.getByTestId('navigation-arrow-right'))
-      expect(screen.getByTestId('navigation-arrow-left')).toBeEnabled()
+      await waitFor(() => {
+        expect(screen.getByTestId('navigation-arrow-left')).toBeEnabled()
+      })
       expect(screen.getByTestId('navigation-arrow-right')).toBeEnabled()
       expect(onSlideCallbackMock).toHaveBeenCalledTimes(1)
 
       // Go next 2.
       userEvent.click(screen.getByTestId('navigation-arrow-right'))
       expect(screen.getByTestId('navigation-arrow-left')).toBeEnabled()
-      expect(screen.getByTestId('navigation-arrow-right')).toBeDisabled()
+      await waitFor(() => {
+        expect(screen.getByTestId('navigation-arrow-right')).toBeDisabled()
+      })
       expect(onSlideCallbackMock).toHaveBeenCalledTimes(2)
 
       // Go previous 1.
       userEvent.click(screen.getByTestId('navigation-arrow-left'))
       expect(screen.getByTestId('navigation-arrow-left')).toBeEnabled()
-      expect(screen.getByTestId('navigation-arrow-right')).toBeEnabled()
+      await waitFor(() => {
+        expect(screen.getByTestId('navigation-arrow-right')).toBeEnabled()
+      })
       expect(onSlideCallbackMock).toHaveBeenCalledTimes(3)
 
       // Go previous - back to where we started.
       userEvent.click(screen.getByTestId('navigation-arrow-left'))
-      expect(screen.getByTestId('navigation-arrow-left')).toBeDisabled()
+      await waitFor(() => {
+        expect(screen.getByTestId('navigation-arrow-left')).toBeDisabled()
+      })
       expect(screen.getByTestId('navigation-arrow-right')).toBeEnabled()
       expect(onSlideCallbackMock).toHaveBeenCalledTimes(4)
     })
@@ -72,10 +80,12 @@ describe('Carousel Component', () => {
       expect(screen.getByTestId('navigation-arrow-left')).toBeDisabled()
     })
 
-    it('disables right arrow when on the last slide', () => {
+    it('disables right arrow when on the last slide', async () => {
       const setSlideIndex = jest.fn()
       setup({ setSlideIndex, slideIndex: 2, hasArrowNavigation: true })
-      expect(screen.getByTestId('navigation-arrow-right')).toBeDisabled()
+      await waitFor(() => {
+        expect(screen.getByTestId('navigation-arrow-right')).toBeDisabled()
+      })
     })
 
     it('calls goToNextSlide when right arrow is clicked', async () => {
@@ -89,11 +99,11 @@ describe('Carousel Component', () => {
       })
 
       userEvent.click(screen.getByTestId('navigation-arrow-right'))
-      expect(setSlideIndex).toHaveBeenCalledTimes(1)
 
       await waitFor(() => {
-        expect(onSlideCallbackMock).toHaveBeenCalledTimes(1)
+        expect(setSlideIndex).toHaveBeenCalledTimes(1)
       })
+      expect(onSlideCallbackMock).toHaveBeenCalledTimes(1)
     })
 
     it('calls goToPrevSlide when left arrow is clicked', async () => {
@@ -102,7 +112,9 @@ describe('Carousel Component', () => {
 
       userEvent.click(screen.getByTestId('navigation-arrow-left'))
 
-      expect(setSlideIndex).toHaveBeenCalledTimes(1)
+      await waitFor(() => {
+        expect(setSlideIndex).toHaveBeenCalledTimes(1)
+      })
     })
 
     it('renders the dot navigation placeholder', () => {
