@@ -1,3 +1,20 @@
+# [4.1.0](https://github.com/takahirohonda/react-mdh-blog-components/compare/v4.0.1...v4.1.0) (2025-01-29)
+
+
+### Bug Fixes
+
+* Carousel Fix ([#19](https://github.com/takahirohonda/react-mdh-blog-components/issues/19)) ([b7a879c](https://github.com/takahirohonda/react-mdh-blog-components/commit/b7a879c5bdae93aed839de6d997ea4e4a7c94587))
+* Carousel mobile style and unit tests ([#20](https://github.com/takahirohonda/react-mdh-blog-components/issues/20)) ([8809f72](https://github.com/takahirohonda/react-mdh-blog-components/commit/8809f72dc4d173714e19bcf4687fd2ace8d17aaf))
+* fix react issue ([ea924cf](https://github.com/takahirohonda/react-mdh-blog-components/commit/ea924cf8a88cd79d608dc3bc6dd2a50ee45d5607))
+* fix tests ([79af4dd](https://github.com/takahirohonda/react-mdh-blog-components/commit/79af4dd86bffff76e380edb5f6534e5a930a09e9))
+* update ([67089b1](https://github.com/takahirohonda/react-mdh-blog-components/commit/67089b1c3d4c3189d4c5b12213ab58283af6d952))
+
+
+### Features
+
+* add carousel v1 ([#18](https://github.com/takahirohonda/react-mdh-blog-components/issues/18)) ([48395de](https://github.com/takahirohonda/react-mdh-blog-components/commit/48395de4bbac13907172b05a37d5754e9c7c6cd4))
+* Carousel update ([325bc36](https://github.com/takahirohonda/react-mdh-blog-components/commit/325bc364f2eeb2d760ed1c82d52d7341d5323661))
+
 # [4.1.0](https://github.com/takahirohonda/react-mdh-blog-components/compare/v4.0.1...v4.1.0) (2025-01-24)
 
 
