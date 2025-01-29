@@ -18,7 +18,7 @@ export const NavArrow = ({
       type="button"
       data-testid={`navigation-arrow-${direction}`}
       onClick={handleClick}
-      disabled={disabled}
+      disabled={Boolean(disabled)}
     >
       <StyledArrowIcon height="13" width="13" disabled={disabled}>
         {direction === 'left' ? <LeftArrow /> : <RightArrow />}
