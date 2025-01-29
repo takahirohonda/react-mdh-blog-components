@@ -4,6 +4,10 @@ export const setWidth = (
 ) => {
   const sectionWidth = entries[0].contentRect.width
   if (sectionWidth) {
-    setComputedWidth(sectionWidth)
+    window.requestAnimationFrame(() => {
+      setComputedWidth((prevWidth) =>
+        prevWidth !== sectionWidth ? sectionWidth : prevWidth
+      )
+    })
   }
 }

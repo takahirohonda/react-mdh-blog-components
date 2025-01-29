@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { BREAKPOINT } from 'styles/breakpoints'
 import { noMarginsPaddings } from 'styles/common'
-
 import { MerriweatherRegular } from 'styles/fonts'
+
 import { HeadingStyles } from './Heading.types'
 
 export interface StyledHeadingProps {

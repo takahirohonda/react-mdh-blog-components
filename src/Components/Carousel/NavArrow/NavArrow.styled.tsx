@@ -6,6 +6,8 @@ export const StyledNavArrowButton = styled.button`
   border: 0;
   margin: 0;
   outline: 0;
+  // it might be better to have the width and height for this button.
+  // to make it to a clickable area of 45px and add the arrow within.
   padding: 0.75rem 1rem;
 `
 
