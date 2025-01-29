@@ -17,7 +17,7 @@ export const NavDot = ({
 }: NavDotProps) => {
   const slideIndexArray = [...Array(totalSlideNumber).keys()]
   return (
-    <Flex>
+    <Flex data-testid="carousel-nav-dot">
       {slideIndexArray.map((slideIndex) => {
         return (
           <Dot

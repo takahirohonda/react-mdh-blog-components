@@ -117,10 +117,9 @@ describe('Carousel Component', () => {
       })
     })
 
-    it('renders the dot navigation placeholder', () => {
+    it('renders the dot navigation', () => {
       setup({ hasDotNavigation: true })
-      expect(screen.getByText('DotNavigation')).toBeVisible()
-      expect(screen.getByText('This will be implemented later.')).toBeVisible()
+      expect(screen.getByTestId('carousel-nav-dot')).toBeVisible()
     })
   })
 })
