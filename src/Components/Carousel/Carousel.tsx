@@ -5,6 +5,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
+import { debounce } from 'lodash-es'
 
 import * as styled from './Carousel.styled'
 import { handleSlideAction } from './handleSlideAction'
@@ -46,9 +47,11 @@ export const Carousel = ({
   const isLastSlide = currentIndex === totalSlideNumber - 1
 
   useEffect(() => {
-    const observer = new ResizeObserver((entries) => {
-      setWidth(entries, setComputedWidth)
-    })
+    const observer = new ResizeObserver(
+      debounce((entries: ResizeObserverEntry[]) => {
+        setWidth(entries, setComputedWidth)
+      }, 100)
+    )
 
     const currentRef = carouselSectionRef.current
     if (currentRef) {
