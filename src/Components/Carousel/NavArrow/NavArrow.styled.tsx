@@ -1,5 +1,6 @@
 import { SvgIcon } from 'Components/SvgIcon'
 import styled from 'styled-components'
+import { BREAKPOINT } from 'styles'
 
 export const StyledNavArrowButton = styled.button`
   background-color: transparent;
@@ -8,7 +9,11 @@ export const StyledNavArrowButton = styled.button`
   outline: 0;
   // it might be better to have the width and height for this button.
   // to make it to a clickable area of 45px and add the arrow within.
-  padding: 0.75rem 1rem;
+  padding: 16px 0;
+
+  @media screen and (min-width: ${BREAKPOINT.XS}px) {
+    padding: 16px 16px;
+  }
 `
 
 export const StyledArrowIcon = styled(SvgIcon)<{
